@@ -94,6 +94,9 @@ class BaseSpider(scrapy.Spider):
         else:
             request = failure.request
             self.logger.error('UNKNOWN ERROR on %s', request.url)
+        
+        
+     def parse(self, response):
         """
         Parses the main html response
         :param response:
